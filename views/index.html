@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta lang="xx-XX">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulir absensi SMAN 2 Slawi">
+    <meta name="keywords" content="Formulir absensi">
+    <title>Formulir absensi SMA Negeri 2 Slawi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" href="/images/logosma.jpeg" type="image/jpeg">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <span>Smandawi</span>
+        </div>
+        <div class="navbar-right">
+            <button id="btn-history">Catatan</button>
+            <i id="btn-info" class="fa-solid fa-exclamation"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div id="info-container">
+            <ol>
+                <li>Masih dalam tahap pengembangan</li>
+                <li>Infokan bug ke <a href="https://www.instagram.com/hy.rii28?igsh=YWdnYmJ0ZGdidmww">instagram</a></li>
+                <li>Hanya bisa melakukan absensi sekali dalam sehari</li>
+                <li>Jika ingin melihat catatan refresh dulu</li>
+            </ol>
+        </div>
+        <div id="history-container">
+            <table id="attendanceList">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="form-container">
+            <div class="intro">
+                <span>Absensi</span>
+            </div>
+            <form id="attendanceForm">
+                <div class="input-container">
+                <label for="student_name">Nama:</label>
+                    <input type="text" placeholder="Ketik disini..." id="student_name" required autocomplete="off" autocapitalize="words">
+                </div>
+                <div class="input-container">
+                    <label for="student_code">Kode:</label>
+                    <input type="text" placeholder="Ketik disini..." id="student_code" required autocomplete="off" inputmode="numeric">
+                </div>
+                <div class="input-container">
+                    <label for="student_grade">Kelas:</label>
+                    <select id="grade" required>
+                        <option value="">Pilih kelas...</option>
+                        <option value="kelasX">Kelas X</option>
+                        <option value="kelasXI">Kelas XI</option>
+                        <option value="kelasXII">Kelas XII</option>
+                    </select>
+                    <div id="grade-container">
+                        <div class="input-container">
+                            <label for="student_grade">Subkelas:</label>
+                            <select id="student_grade" required></select>    
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="status">Keterangan:</label>
+                    <select id="status" required>
+                        <option value="present">Hadir</option>
+                        <option value="absent">Tidak hadir</option>
+                    </select>
+                </div>
+                <button type="submit" class="button">Kirim</button>
+                <span id="form-message" style="display: none;"></span>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
